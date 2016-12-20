@@ -4,20 +4,20 @@ body {
 }
 
 .bordered {
-    border-width: 3px;
-    border-color: #3366cc;
+   padding:2px;
+   border:2px solid #6899e6;
 }
 
 #botright {
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 10%;
+    font-family:"Lucida Console", Monaco, monospace;
+    font-size:10%;
     position:fixed;
     bottom:10px;
     right:10px;
 }
 
 #topleft {
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family:"Lucida Console", Monaco, monospace;
     position:fixed;
     top:10px;
     left:10px;
