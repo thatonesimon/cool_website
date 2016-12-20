@@ -3,6 +3,11 @@ body {
     font-family: 'Alegreya SC';
 }
 
+.bordered {
+    border-width: 3px;
+    border-color: #3366cc;
+}
+
 #botright {
     font-family: "Lucida Console", Monaco, monospace;
     font-size: 10%;
