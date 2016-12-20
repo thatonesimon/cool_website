@@ -2,12 +2,8 @@ body {
     background-color: powderblue;
 }
 
-.botright {
-    position:relative
-}
-
-.src {
-    position:absolute;
+#botright {
+    position:fixed;
     bottom:0;
     right:0;
 }
