@@ -8,7 +8,7 @@ body {
 .bordered {
     padding:2px;
     border:2px solid #6899e6;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #botright {
