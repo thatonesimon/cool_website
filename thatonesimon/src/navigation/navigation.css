@@ -1,0 +1,28 @@
+.header {
+    background-color: black;
+    /*background-image: url("../assets/images/fire_header_wide.jpg");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10%;
+    color: white;
+}
+
+.header-links {
+    flex-direction: row;
+
+    bottom: 0;
+    position: relative;
+}
+
+.header-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.footer {
+    bottom: 0;
+    position: relative;
+    color: #282c34;
+}
