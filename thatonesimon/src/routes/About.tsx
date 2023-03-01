@@ -1,17 +1,20 @@
 import React from 'react';
 
-const divStyle = {
-    color:'black',
-};
+import './routes.css'
 
 export default class About extends React.Component {
 
     render() {
         return (
-            <div style={divStyle}>
-                <h2>About Page</h2>
+            <div className='base-page'>
+                <h1>About Me</h1>
                 <main>
-                    <p>This section contains information about...</p>
+                    <p>
+                        Hi! My name is Simon, and I am a flow artist based in San Diego, CA. I've been flowing since 2018, and specialize in rope dart, fans, double staves, and poi. I also have experience with dragon staff.
+                    </p>
+                    <p>
+
+                    </p>
                 </main>
             </div>
         )

@@ -4,7 +4,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 10%;
+    /*height: 10%;*/
     color: white;
 }
 
@@ -15,8 +15,16 @@
     position: relative;
 }
 
+.header-nav-button {
+    align-content: start;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    background-color: grey;
+    border-radius: 5px;
+}
+
 .header-image {
-    max-height: 100%;
     max-width: 100%;
     object-fit: contain;
 }
@@ -24,5 +32,5 @@
 .footer {
     bottom: 0;
     position: relative;
-    color: #282c34;
+    color: white;
 }

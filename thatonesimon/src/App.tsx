@@ -1,16 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Link, Outlet, Route, Routes} from "react-router-dom";
-import Home from "./routes/Home";
-import About from "./routes/About";
+import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Header from "./navigation/Header";
 import Footer from "./navigation/Footer";
+import Home from "./routes/Home";
 
 function App() {
+    const { pathname } = useLocation();
+
     return (
-        <div className="App">
+        <div className="app">
             <Header />
+            {pathname === '/' && <Home />}
             <div id="content" className="content">
                 <Outlet />
             </div>
