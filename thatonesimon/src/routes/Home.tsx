@@ -1,5 +1,4 @@
 import React from 'react';
-import BrokenImageGallery from "../assets/BrokenImageGallery";
 import ImageCarousel from "../assets/ImageCarousel";
 import ImageGallery from "../assets/ImageGallery";
 

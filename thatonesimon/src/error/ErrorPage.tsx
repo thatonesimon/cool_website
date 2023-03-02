@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, useRouteError} from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 import Header from "../navigation/Header";
 
 export default function ErrorPage() {

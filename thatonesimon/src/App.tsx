@@ -1,21 +1,21 @@
 import React from 'react';
 import './App.css';
-import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "./navigation/Header";
 import Footer from "./navigation/Footer";
 import Home from "./routes/Home";
 
 function App() {
-    const { pathname } = useLocation();
+    const {pathname} = useLocation();
 
     return (
         <div className="app">
-            <Header />
-            {pathname === '/' && <Home />}
+            <Header/>
+            {pathname === '/' && <Home/>}
             <div id="content" className="content">
-                <Outlet />
+                <Outlet/>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }
