@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import fire_header from '../assets/images/fire_header_wide.jpg'
 
 interface NavItem {
@@ -26,26 +26,33 @@ const navItems: NavItem[] = [
     }
 ];
 
-export default class Header extends React.Component {
+export default function Header() {
 
-    getNavButtons(navItems: NavItem[]) {
+    const pathname = useLocation();
+
+    const getNavButtons = (navItems: NavItem[]) => {
         const navButtons: React.ReactElement[] = [];
 
         navItems.forEach(navItem => {
-            navButtons.push(<Link className='header-nav-button' to={navItem.path}>{navItem.label}</Link>)
+            navButtons.push(
+                <Link
+                    className={pathname.pathname === navItem.path ? 'header-nav-button-selected' : 'header-nav-button'}
+                    to={navItem.path}
+                >
+                    {navItem.label}
+                </Link>
+            )
         });
 
         return navButtons;
     }
 
-    render() {
-        return (
-            <div className='header'>
-                <img src={fire_header} alt='Header' className='header-image'/>
-                <nav className='header-links'>
-                    {this.getNavButtons(navItems)}
-                </nav>
-            </div>
-        )
-    }
+    return (
+        <div className='header'>
+            <img src={fire_header} alt='Header' className='header-image'/>
+            <nav className='header-links'>
+                {getNavButtons(navItems)}
+            </nav>
+        </div>
+    )
 }

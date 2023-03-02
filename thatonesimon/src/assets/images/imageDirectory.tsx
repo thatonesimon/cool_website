@@ -26,7 +26,7 @@ export const carouselImages: ImageDetails[] = [
     },
     {
         source: vibey_desert,
-        description: 'Vibey Desert 2022',
+        description: 'Vibey Desert 2021',
     },
     {
         source: dart_democracy,

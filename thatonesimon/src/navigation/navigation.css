@@ -6,6 +6,8 @@
     background-position: center;
     /*height: 10%;*/
     color: white;
+
+    max-width: 100vw;
 }
 
 .header-links {
@@ -17,20 +19,27 @@
 
 .header-nav-button {
     align-content: start;
-    color: white;
     padding: 10px;
     margin: 10px;
+
+    color: white;
     background-color: grey;
-    border-radius: 5px;
+
+    border-radius: 2px;
 }
 
 .header-nav-button-selected {
     align-content: start;
-    color: black;
     padding: 10px;
     margin: 10px;
-    background-color: darkred;
-    border-radius: 5px;
+
+    color: white;
+    background-color: grey;
+
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
 }
 
 .header-image {
