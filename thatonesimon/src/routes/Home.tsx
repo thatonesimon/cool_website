@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageGallery from "../assets/ImageGallery";
 
 export default class Home extends React.Component {
 
@@ -9,6 +10,7 @@ export default class Home extends React.Component {
                 <main>
                     <p>If you'd like to contact me, </p>
                 </main>
+                <ImageGallery/>
             </div>
         )
     }

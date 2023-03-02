@@ -24,6 +24,15 @@
     border-radius: 5px;
 }
 
+.header-nav-button-selected {
+    align-content: start;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    background-color: darkred;
+    border-radius: 5px;
+}
+
 .header-image {
     max-width: 100%;
     object-fit: contain;
