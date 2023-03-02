@@ -1,27 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "35504e9299be14ad8a7e",
-    "url": "/static/css/main.24d34dff.chunk.css"
+    "revision": "e5bc0242e0592f887941",
+    "url": "/static/css/main.dacedcd7.chunk.css"
   },
   {
-    "revision": "35504e9299be14ad8a7e",
-    "url": "/static/js/main.35504e92.chunk.js"
+    "revision": "e5bc0242e0592f887941",
+    "url": "/static/js/main.e5bc0242.chunk.js"
   },
   {
-    "revision": "ff3e70574e23ec862a62",
-    "url": "/static/js/1.ff3e7057.chunk.js"
+    "revision": "c0dba26f4ccf71cea450",
+    "url": "/static/js/1.c0dba26f.chunk.js"
   },
   {
-    "revision": "86eb71204dadb43c2a54",
-    "url": "/static/css/2.6a4e6ce3.chunk.css"
+    "revision": "a7ad6d97f65f33093507",
+    "url": "/static/css/2.833ddc7d.chunk.css"
   },
   {
-    "revision": "86eb71204dadb43c2a54",
-    "url": "/static/js/2.86eb7120.chunk.js"
+    "revision": "a7ad6d97f65f33093507",
+    "url": "/static/js/2.a7ad6d97.chunk.js"
   },
   {
-    "revision": "452ecbd6c2de88b254e0",
-    "url": "/static/js/runtime~main.452ecbd6.js"
+    "revision": "561708c8e89dc260303a",
+    "url": "/static/js/runtime~main.561708c8.js"
   },
   {
     "revision": "4f3310f1ddaa1e6e68d9d9931427b9d4",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/dartdemocracy.8f3686e8.jpg"
   },
   {
-    "revision": "6c637ce542a8db0ce81b141d9a46d001",
+    "revision": "db1ead76f1840a5d02478305c84cd4f7",
     "url": "/index.html"
   }
 ];
