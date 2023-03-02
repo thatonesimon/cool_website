@@ -1,0 +1,10 @@
+.image-carousel-container {
+    justify-content: center;
+}
+
+.image-carousel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
