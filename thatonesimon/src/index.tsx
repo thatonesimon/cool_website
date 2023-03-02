@@ -5,30 +5,30 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
     BrowserRouter,
-    createBrowserRouter, RouterProvider
+    createBrowserRouter, createHashRouter, RouterProvider
 } from "react-router-dom";
 import About from "./routes/About";
 import Experience from "./routes/Experience";
 import ErrorPage from "./error/ErrorPage";
 import Contact from "./routes/Contact";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
-        element: <App />,
-        errorElement: <ErrorPage />,
+        element: <App/>,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 path: 'experience',
-                element: <Experience />,
+                element: <Experience/>,
             },
             {
                 path: 'about',
-                element: <About />,
+                element: <About/>,
             },
             {
                 path: 'contact',
-                element: <Contact />,
+                element: <Contact/>,
             },
         ],
     },
