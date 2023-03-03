@@ -66,7 +66,5 @@ export const performanceImages: ImageDetails[] = transformToImageDetails([
     beach9,
 ]);
 
-export const casualImages: ImageDetails[] = transformToImageDetails([
-
-]);
+export const casualImages: ImageDetails[] = transformToImageDetails([]);
 

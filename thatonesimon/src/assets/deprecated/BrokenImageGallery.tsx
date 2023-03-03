@@ -1,6 +1,6 @@
 import React from "react";
 import ReactImageGallery from "react-image-gallery";
-import { promoImages } from "./images/imageDirectory";
+import { promoImages } from "../images/imageDirectory";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 

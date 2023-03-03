@@ -9,6 +9,9 @@ import Experience from "./routes/Experience";
 import ErrorPage from "./error/ErrorPage";
 import Contact from "./routes/Contact";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 const router = createHashRouter([
     {
         path: '/',

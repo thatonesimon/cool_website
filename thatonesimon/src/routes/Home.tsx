@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageCarousel from "../assets/ImageCarousel";
 import ImageGallery from "../assets/ImageGallery";
+import ImageCarousel from "../assets/ImageCarousel";
 
 export default class Home extends React.Component {
 

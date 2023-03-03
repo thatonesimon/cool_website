@@ -1,32 +1,33 @@
-import React from "react";
-import { Carousel } from 'react-responsive-carousel';
-
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "./assets.css";
-
+import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
 import { promoImages } from "./images/imageDirectory";
 
-export default class ImageCarousel extends React.Component {
+export default function ImageCarousel() {
 
-    transformCarouselImages() {
+    const getCarouselItems = () => {
         return promoImages.map(i => {
             return (
-                <div>
-                    <img src={i.source} alt={i.description}/>
-                    <p className="legend">{i.description}</p>
-                </div>
+                <Carousel.Item>
+
+                    <img
+                        className="d-block w-100"
+                        src={i.source}
+                        alt={i.description}
+                    />
+                    <Carousel.Caption>
+                        <p>{i.description}</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
             )
         })
     }
 
-    render() {
-        return (
-            <div className='image-carousel-container' >
-                <Carousel className='image-carousel'>
-                    {this.transformCarouselImages()}
-                </Carousel>
-            </div>
-        );
-    }
+    return (
+        <div className='image-carousel-container'>
+            <Carousel>
+                {getCarouselItems()}
+            </Carousel>
+        </div>
+    )
 }

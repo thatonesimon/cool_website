@@ -7,5 +7,4 @@ export const performanceExperience: string[] = [
     '2020 Vibey Desert - Boron, CA',
 ];
 
-export const teachingExperience: string[] = [
-];
+export const teachingExperience: string[] = [];

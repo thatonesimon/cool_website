@@ -26,6 +26,7 @@ export default class Experience extends React.Component {
         );
 
     }
+
     render() {
         return (
             <div className='base-page'>

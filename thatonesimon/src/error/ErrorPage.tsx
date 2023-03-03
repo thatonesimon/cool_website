@@ -8,7 +8,7 @@ export default function ErrorPage() {
 
     return (
         <div className='app'>
-            <Header />
+            <Header/>
             <div id="error-page" style={{textAlign: "center"}}>
                 <h1>Oops!</h1>
                 <p>Sorry, an unexpected error has occurred.</p>

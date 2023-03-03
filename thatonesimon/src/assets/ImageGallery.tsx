@@ -4,13 +4,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./assets.css";
 
 
-import { promoImages, ImageDetails, performanceImages } from "./images/imageDirectory";
+import { ImageDetails, performanceImages } from "./images/imageDirectory";
 import Gallery from "react-photo-gallery";
 import { shuffle } from "./utils";
 
 export default function ImageGallery() {
     const [images, setImages] = useState<any>([]);
-
 
 
     const transformCarouselImages = async () => {
