@@ -7,14 +7,15 @@ import "./assets.css";
 import { ImageDetails, performanceImages } from "./images/imageDirectory";
 import Gallery from "react-photo-gallery";
 import { shuffle } from "./utils";
+import { Spinner } from "react-bootstrap";
 
 export default function ImageGallery() {
     const [images, setImages] = useState<any>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
 
     const transformCarouselImages = async () => {
         const allImages: ImageDetails[] = [...shuffle(performanceImages)];
-        // const allImages: ImageDetails[] = [...promoImages, ...performanceImages];
 
         const transformedImages = [];
 
@@ -30,18 +31,27 @@ export default function ImageGallery() {
     }
 
     useEffect(() => {
-        transformCarouselImages().then(r =>
-            setImages(r)
-        );
+        transformCarouselImages().then(r => {
+            setImages(r);
+            setLoading(false);
+        })
     }, [])
 
     return (
         <div>
-            <Gallery
-                // @ts-ignore
-                photos={images}
-                margin={5}
-            />
+            {loading ?
+                <div>
+                    <Spinner animation="grow" variant="light" style={{margin: "2%"}}/>
+                    <Spinner animation="grow" variant="light" style={{margin: "2%"}}/>
+                    <Spinner animation="grow" variant="light" style={{margin: "2%"}}/>
+                </div>
+                :
+                <Gallery
+                    // @ts-ignore
+                    photos={images}
+                    margin={5}
+                />
+            }
         </div>
     );
 }
