@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
         return (
             <div className='footer'>
                 <hr/>
-                <p>Deployment code: test</p>
+                <p>Deployment code: gus</p>
             </div>
         )
     }
