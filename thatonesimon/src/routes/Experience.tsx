@@ -1,30 +1,48 @@
 import '../App.css';
 import React from 'react';
 
-import { performanceExperience, teachingExperience } from "./data/experience-data";
+import { performanceExperience, teachingExperience } from "./data/experienceData";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
 
 
 export default class Experience extends React.Component {
 
-    getExperienceList(experiences: string[]) {
+    getExperienceListGroupsYear(experiences: string[]) {
+        return experiences.map(experience => {
+            return (
+                <ListGroupItem variant="dark">
+                    {experience}
+                </ListGroupItem>
+            )
+        })
+    }
+
+    getExperienceListGroups(experiences: {[year: string]: string[]}) {
         const experienceList: React.ReactElement[] = [];
 
-        if (experiences.length <= 0) {
+        const years: string[] = Object.keys(experiences)
+            .sort((a, b) => parseInt(b) - parseInt(a));
+
+        if (years.length <= 0) {
             return (
                 <p>We're working on this :)</p>
             )
         }
 
-        experiences.forEach(experience => {
-            experienceList.push(<li>{experience}</li>)
-        });
+        for (let year of years) {
+            experienceList.push(
+                <div className="experience">
+                    <h2>
+                        {year}
+                    </h2>
+                    <ListGroup>
+                        {this.getExperienceListGroupsYear(experiences[year])}
+                    </ListGroup>
+                </div>
+            )
+        }
 
-        return (
-            <ul>
-                {experienceList}
-            </ul>
-        );
-
+        return experienceList;
     }
 
     render() {
@@ -33,11 +51,11 @@ export default class Experience extends React.Component {
                 <h1>
                     Performance Experience
                 </h1>
-                {this.getExperienceList(performanceExperience)}
+                {this.getExperienceListGroups(performanceExperience)}
                 <h1>
                     Teaching Experience
                 </h1>
-                {this.getExperienceList(teachingExperience)}
+                {this.getExperienceListGroups(teachingExperience)}
             </div>
 
         );

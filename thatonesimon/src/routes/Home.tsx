@@ -7,9 +7,9 @@ export default class Home extends React.Component {
     render() {
         return (
             <div className='base-page'>
-                <h1>Welcome to Simon's performer profile!</h1>
+                <h3>Welcome to my profile!</h3>
                 <ImageCarousel/>
-                <h1>Image Gallery</h1>
+                <h5>Image Gallery</h5>
                 <ImageGallery/>
             </div>
         )
