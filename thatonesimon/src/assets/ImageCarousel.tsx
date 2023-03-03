@@ -5,12 +5,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./assets.css";
 
 
-import { carouselImages } from "./images/imageDirectory";
+import { promoImages } from "./images/imageDirectory";
 
 export default class ImageCarousel extends React.Component {
 
     transformCarouselImages() {
-        return carouselImages.map(i => {
+        return promoImages.map(i => {
             return (
                 <div>
                     <img src={i.source} alt={i.description}/>

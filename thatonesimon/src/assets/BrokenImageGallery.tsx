@@ -1,6 +1,6 @@
 import React from "react";
 import ReactImageGallery from "react-image-gallery";
-import { carouselImages } from "./images/imageDirectory";
+import { promoImages } from "./images/imageDirectory";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -8,7 +8,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 export default class BrokenImageGallery extends React.Component {
 
     transformCarouselImages() {
-        return carouselImages.map(i => {
+        return promoImages.map(i => {
             return {
                 original: i.source,
                 thumbnail: i.source,

@@ -1,41 +1,48 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { getImageSize } from "react-image-size";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./assets.css";
 
 
-import { carouselImages, performanceImages } from "./images/imageDirectory";
+import { promoImages, ImageDetails, performanceImages } from "./images/imageDirectory";
 import Gallery from "react-photo-gallery";
+import { shuffle } from "./utils";
 
-export default class ImageGallery extends React.Component {
+export default function ImageGallery() {
+    const [images, setImages] = useState<any>([]);
 
-    transformCarouselImages() {
-        return [...carouselImages, ...performanceImages].map(i => {
-            let w = 1;
-            let  h = 1; // TODO: here cause nullish ?? doesnt work...
-            if (i.width) {
-                w = i.width;
-            }
-            if (i.height) {
-                h = i.height;
-            }
-            return {
+
+
+    const transformCarouselImages = async () => {
+        const allImages: ImageDetails[] = [...shuffle(performanceImages)];
+        // const allImages: ImageDetails[] = [...promoImages, ...performanceImages];
+
+        const transformedImages = [];
+
+        for (let i of allImages) {
+            const {width, height} = await getImageSize(i.source);
+            transformedImages.push({
                 src: i.source,
-                width: w,
-                height: h,
-            }
-        })
+                width: width,
+                height: height,
+            });
+        }
+        return transformedImages;
     }
 
-    render() {
-        return (
-            <div>
-                <Gallery
-                    // @ts-ignore
-                    photos={this.transformCarouselImages()}
-                    margin={5}
-                />
-            </div>
+    useEffect(() => {
+        transformCarouselImages().then(r =>
+            setImages(r)
         );
-    }
+    }, [])
+
+    return (
+        <div>
+            <Gallery
+                // @ts-ignore
+                photos={images}
+                margin={5}
+            />
+        </div>
+    );
 }
